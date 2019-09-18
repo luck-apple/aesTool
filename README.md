@@ -413,6 +413,10 @@ JNIEXPORT jint JNI_OnLoad(JavaVM *vm, void *reserved) {
 #endif
 ```
 
-现在 so 的安全性又有提高。其实还可以做一件事，就是在 native 的加解密方法里，验证当前的签名，签名不一致就报错或是返回空。具体 native 获取签名的方法，大家可以搜一下。 native 中保存签名的 sha1 值，可以像保存 key 和 iv 那样保存。还可以对 so 加固。
+现在 so 的安全性又有提高。我们还可以做什么？
+- 验证签名，签名不一致就报错或是返回空
+- 防调试
+- 防 Xposed
+- 对 so 加固
 
 
